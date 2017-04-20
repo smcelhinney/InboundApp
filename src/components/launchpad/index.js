@@ -16,6 +16,8 @@ import {
 
 import AgendaNavigation from '../agenda/navigation';
 
+const gridMargin = 10;
+
 const styles = StyleSheet.create({
   body: {
     display: 'flex',
@@ -29,16 +31,15 @@ const styles = StyleSheet.create({
     padding: 10
   },
   grid: {
-    width: Dimensions.get('window').width,
-    display: 'flex',
+    // width: Dimensions.get('window').width,
     flexDirection: 'row',
     flexWrap: 'wrap'
   },
   gridItem: {
     backgroundColor: 'pink',
-    width: 100,
+    width: (Dimensions.get('window').width / 3) - (gridMargin * 2),
     height: (Dimensions.get('window').width / 100) * 20,
-    margin: 10
+    margin: gridMargin
   }
 });
 
@@ -75,7 +76,7 @@ class Home extends React.Component {
     };
 
     return (
-      <FlatList style={styles.grid} data={items} renderItem={({item}) => (
+      <FlatList horizontal={false} numColumns={3} style={styles.grid} data={items} renderItem={({item}) => (
         <TouchableOpacity style={styles.gridItem} onPress={() => navigationAction(item)}>
           <Text key={item.id}>{item.title}</Text>
         </TouchableOpacity>
