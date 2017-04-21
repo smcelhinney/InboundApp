@@ -1,6 +1,14 @@
 import React from 'react';
+import {StyleSheet, Image} from 'react-native';
 import {TabNavigator} from 'react-navigation';
 import Agenda from './index'
+
+const styles = StyleSheet.create({
+  icon: {
+    width: 26,
+    height: 26
+  }
+});
 
 const datesArray = [
   {
@@ -21,8 +29,15 @@ const datesArray = [
 const navigationObj = {};
 datesArray.forEach((dateObj, i) => {
   navigationObj[`NavigationObj${i}`] = {
-    navigationOptions: ({navigation}) => ({title: dateObj.display}),
-    screen: props => <Agenda {...props} searchDate={dateObj.date} />
+    navigationOptions: ({navigation}) => ({
+      title: dateObj.display,
+      tabBarIcon: ({tintColor}) => (<Image source={require('../../assets/calendar.png')} style={[
+        styles.icon, {
+          tintColor: tintColor
+        }
+      ]}/>)
+    }),
+    screen: props => <Agenda {...props} searchDate={dateObj.date}/>
   }
 });
 
