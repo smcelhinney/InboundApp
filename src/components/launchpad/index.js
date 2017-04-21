@@ -15,6 +15,7 @@ import {
 } from 'react-navigation';
 
 import AgendaNavigation from '../agenda/navigation';
+import BasicAnimationExample from '../lottie/sample';
 
 const gridMargin = 10;
 
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
   gridItem: {
     backgroundColor: 'pink',
     width: (Dimensions.get('window').width / 3) - (gridMargin * 2),
-    height: (Dimensions.get('window').width / 100) * 20,
+    height: (Dimensions.get('window').height / 3) - (gridMargin * 2) - 70,
     margin: gridMargin
   }
 });
@@ -56,7 +57,7 @@ class Home extends React.Component {
       gridData: [
         {id: 1, title: 'My Events', icon: ''},
         {id: 2, title: 'Agenda', icon: '', name: 'Agenda'},
-        {id: 3, title: 'Speakers', icon: ''},
+        {id: 3, title: 'Speakers', icon: '', name: 'Speakers'},
         {id: 4, title: 'Attendees', icon: ''},
         {id: 5, title: 'Social', icon: ''},
         {id: 6, title: 'Sponsors', icon: ''},
@@ -114,12 +115,12 @@ const InboundApp = StackNavigator({
     screen: AgendaNavigation
   },
   //
-  // Speakers: {
-  //   screen: Speakers,
-  //   navigationOptions: {
-  //     title: 'Speakers'
-  //   }
-  // },
+  Speakers: {
+    screen: BasicAnimationExample,
+    navigationOptions: {
+      title: 'Speakers'
+    }
+  },
 });
 
 export default InboundApp;
