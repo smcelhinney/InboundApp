@@ -1,11 +1,5 @@
 import React, {Component, PureComponent} from 'react';
-import {
-  View,
-  Text,
-  FlatList,
-  TouchableOpacity,
-  ScrollView
-} from 'react-native';
+import {View, Text, FlatList, TouchableOpacity, ScrollView} from 'react-native';
 
 import AgendaItem from './agendaItem';
 import styles from './styles';
@@ -22,10 +16,6 @@ export default class Agenda extends Component {
       detailsShown: []
     }
     this.toggle = this.toggle.bind(this);
-  }
-
-  componentDidUpdate(prevProps) {
-    console.log(this.state.detailsShown);
   }
 
   async _getData() {
@@ -63,9 +53,15 @@ export default class Agenda extends Component {
           <Text style={styles.filterOption}>By Time</Text>
           <Text style={styles.filterOption}>By Track</Text>
         </View>
-        <ScrollView>
-          <FlatList data={this.state.data} renderItem={({item}) => (<AgendaItem item={item}/>)} keyExtractor={(item) => item.id}/>
-        </ScrollView>
+        {this.state.data.length > 0
+          ? (
+            <ScrollView>
+              <FlatList data={this.state.data} renderItem={({item}) => (<AgendaItem item={item}/>)} keyExtractor={(item) => item.id}/>
+            </ScrollView>
+          )
+          : (
+            <Text style={styles.noData}>No data for this day</Text>
+          )}
       </View>
     )
   }

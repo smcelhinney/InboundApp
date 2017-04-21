@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Image} from 'react-native';
+import {StyleSheet, Image, Button} from 'react-native';
 import {TabNavigator} from 'react-navigation';
 import Agenda from './index'
 
@@ -31,6 +31,7 @@ datesArray.forEach((dateObj, i) => {
   navigationObj[`NavigationObj${i}`] = {
     navigationOptions: ({navigation}) => ({
       title: dateObj.display,
+      headerRight: () => (<Button>Hello</Button>),
       tabBarIcon: ({tintColor}) => (<Image source={require('../../assets/calendar.png')} style={[
         styles.icon, {
           tintColor: tintColor
@@ -42,6 +43,8 @@ datesArray.forEach((dateObj, i) => {
 });
 
 const AgendaNavigation = TabNavigator(navigationObj, {
+  tabBarPosition: 'bottom',
+  lazyLoad: true,
   tabBarOptions: {
     activeTintColor: '#FFF',
     activeBackgroundColor: '#F90'

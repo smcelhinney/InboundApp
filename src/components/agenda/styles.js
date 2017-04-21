@@ -44,5 +44,8 @@ export default StyleSheet.create({
     return Object.assign({
       borderLeftColor: '#A08'
     }, this.baseCategoryStyle);
+  },
+  noData: {
+    padding: 10
   }
 });
