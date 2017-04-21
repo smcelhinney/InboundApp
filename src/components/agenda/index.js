@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PureComponent} from 'react';
 import {
   View,
   Text,
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'grey'
   },
   filterOption: {
-    padding: 20,
+    padding: 20
   },
   baseCategoryStyle: {
     padding: 10,
@@ -44,10 +44,6 @@ const styles = StyleSheet.create({
   }
 });
 
-const doContextMenu = (item) => {
-  console.log(item);
-};
-
 // TODO: Candidate for moving to external component
 class AgendaItem extends Component {
   constructor(props) {
@@ -69,6 +65,30 @@ class AgendaItem extends Component {
   }
 }
 
+// TODO: Candidate for moving to external component
+class AgendaDetails extends PureComponent {
+  constructor(props) {
+    super(props);
+    console.log(this.props);
+  }
+
+  componentDidUpdate(){
+    console.log(this.props);
+  }
+
+  render() {
+    let viewRenderer = (<View/>);
+    if (this.props.showDetails) {
+      viewRenderer = (
+        <View style={styles.agendaDetails}>
+          <Text>Details</Text>
+        </View>
+      );
+    }
+    return viewRenderer;
+  }
+}
+
 export default class Agenda extends Component {
   static navigationOptions = {
     tabBarLabel: 'Agenda'
@@ -77,9 +97,11 @@ export default class Agenda extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [],
+      detailsShown: []
     }
     console.log(this.props);
+    this.toggle = this.toggle.bind(this);
   }
 
   // async _getData(){
@@ -94,10 +116,12 @@ export default class Agenda extends Component {
   // }
 
   componentDidUpdate(prevProps) {
-    console.log(this.props.searchDate);
+    console.log(this.state.detailsShown);
   }
 
   componentDidMount() {
+    this.setState({loading: true});
+    
     let data = [
       {
         category: 'Keynote',
@@ -113,7 +137,7 @@ export default class Agenda extends Component {
         time: '8:30AM - 10:00 AM Wed',
         date: '2016-11-08',
         id: 2
-      },{
+      }, {
         category: 'Breakout',
         title: 'Blah blah',
         stage: 'Main Stage',
@@ -128,6 +152,17 @@ export default class Agenda extends Component {
     this.setState({data});
   }
 
+  toggle(itemId) {
+    const detailsShown = [...this.state.detailsShown];
+    console.log(detailsShown, itemId);
+    if (detailsShown.indexOf(itemId) > -1) {
+      detailsShown.splice(detailsShown.indexOf(itemId), 1);
+    } else {
+      detailsShown.push(itemId);
+    }
+    this.setState({detailsShown});
+  }
+
   render() {
     return (
       <View>
@@ -137,9 +172,12 @@ export default class Agenda extends Component {
         </View>
         <ScrollView>
           <FlatList data={this.state.data} renderItem={({item}) => (
-            <TouchableOpacity onPress={() => doContextMenu(item)}>
-              <AgendaItem item={item}/>
-            </TouchableOpacity>
+            <View>
+              <TouchableOpacity onPress={() => this.toggle(item.id)}>
+                <AgendaItem item={item}/>
+              </TouchableOpacity>
+              <AgendaDetails showDetails={this.state.detailsShown.indexOf(item.id) > -1}/>
+            </View>
           )} keyExtractor={(item) => item.id}/>
         </ScrollView>
       </View>

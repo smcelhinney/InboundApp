@@ -1,0 +1,25 @@
+[{
+    "category": "Keynote",
+    "title": "KEY-W01 - Keynote with Ta-Nehisi Coates",
+    "stage": "Main Stage",
+    "time": "8:30AM - 10:00 AM Wed",
+    "date": "2016-11-08",
+    "id": 1
+  },
+  {
+    "category": "Breakout",
+    "title": "KEY-W01 - Keynote with Ta-Nehisi Coates",
+    "stage": "Main Stage",
+    "time": "8:30AM - 10:00 AM Wed",
+    "date": "2016-11-08",
+    "id": 2
+  },
+  {
+    "category": "Breakout",
+    "title": "Blah blah",
+    "stage": "Main Stage",
+    "time": "8:30AM - 10:00 AM Thu",
+    "date": "2016-11-09",
+    "id": 3
+  }
+]
