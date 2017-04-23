@@ -7,11 +7,20 @@
     "test": "jest"
   },
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-plugin-module-alias": "^1.6.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
     "mobile-center-analytics": "^0.4.0",
     "mobile-center-crashes": "^0.4.0",
+    "path": "^0.12.7",
     "react": "16.0.0-alpha.6",
     "react-native": "0.43.3",
-    "react-navigation": "^1.0.0-beta.8"
+    "react-navigation": "^1.0.0-beta.8",
+    "styled-components": "^1.4.5"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",

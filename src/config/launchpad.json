@@ -1,0 +1,41 @@
+{
+   "gridData": [
+      {
+         "title": "My Events",
+         "icon": "placeholder"
+      },
+      {
+         "title": "Agenda",
+         "icon": "book",
+         "routeName": "Agenda"
+      },
+      {
+         "title": "Speakers",
+         "icon": "speaker"
+      },
+      {
+         "title": "Attendees",
+         "icon": "avatar1"
+      },
+      {
+         "title": "Social",
+         "icon": "chat"
+      },
+      {
+         "title": "Sponsors",
+         "icon": "piggy_bank"
+      },
+      {
+         "title": "Maps",
+         "icon": "paper_plane"
+      },
+      {
+         "title": "Servers",
+         "icon": "shopping_bag"
+      },
+      {
+         "title": "Inbound",
+         "icon": "download1"
+      }
+   ]
+}

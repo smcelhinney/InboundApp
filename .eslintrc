@@ -1,0 +1,31 @@
+{
+  "extends": "airbnb",
+  "settings": {
+  },
+  "rules": {
+    "global-require": 0,
+    "comma-dangle": 0,
+    "no-param-reassign": 1,
+    "arrow-parens": 0,
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "import/no-dynamic-require": "off",
+    "import/no-extraneous-dependencies": "off",
+    "no-plusplus": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/require-extension": "off",
+    "react/prefer-stateless-function": "off",
+    "react/require-default-props": "off",
+    "react/prop-types": "off",
+    "react/no-multi-comp": "off"
+  },
+  "globals": {
+    "$": true,
+    "document": true,
+    "window": true,
+    "navigator": true,
+    "localStorage": true,
+    "jQuery": true,
+    "location": true, "Invoca": true
+  }
+}
