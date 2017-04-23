@@ -43,7 +43,12 @@ export default class AgendaItem extends Component {
             ? 'Open'
             : ''}`]}
         >
-          <Image source={{ uri: item.speakerInfo.image }} style={{ width: 150, height: 150 }} />
+          <Image
+            source={{ uri: item.speakerInfo.image }} style={{ width: 100,
+              height: this.state.visible
+            ? 100
+            : 0 }}
+          />
           <Text>{item.title}</Text>
           <Text>Category: {item.category}</Text>
         </View>
