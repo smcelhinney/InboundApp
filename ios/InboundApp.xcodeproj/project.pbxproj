@@ -234,6 +234,41 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		DC24CC871EACC56800F4FE6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC24CC7F1EACC56800F4FE6C /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 806212E9D3E09FD7B3383780F0AC0535;
+			remoteInfo = "MobileCenter-MobileCenterDistributeResources";
+		};
+		DC24CC891EACC56800F4FE6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC24CC7F1EACC56800F4FE6C /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B8A4D4FB2DD4E347F824D8933B92A102;
+			remoteInfo = "Pods-InboundApp";
+		};
+		DC24CC8B1EACC56800F4FE6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC24CC7F1EACC56800F4FE6C /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A9E3FD3B95A08807B0939CC1C7ADFBF;
+			remoteInfo = "Pods-InboundApp-tvOS";
+		};
+		DC24CC8D1EACC56800F4FE6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC24CC7F1EACC56800F4FE6C /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA297BD2F539432890F2A83BFA05F6E9;
+			remoteInfo = "Pods-InboundApp-tvOSTests";
+		};
+		DC24CC8F1EACC56800F4FE6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC24CC7F1EACC56800F4FE6C /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3CDAD167053D9288A72110DF7479020E;
+			remoteInfo = "Pods-InboundAppTests";
+		};
 		DC28BC801EAA27A600AFB6EA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 424285D984EA4D528E7EB6CD /* RNAnalytics.xcodeproj */;
@@ -283,6 +318,7 @@
 		B4EBA91CC3E5511EA2CEED59 /* Pods-InboundApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InboundApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InboundApp/Pods-InboundApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C07E8EF6814916C61C1FC074 /* Pods-InboundApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InboundApp-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InboundApp-tvOSTests/Pods-InboundApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4E97DDE98A911500E9CC55A /* libPods-InboundApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InboundApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC24CC7F1EACC56800F4FE6C /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,6 +516,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				DC24CC7F1EACC56800F4FE6C /* Pods.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -544,6 +581,18 @@
 				8310A9BBFEB8DC8D120C4572 /* Pods-InboundAppTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC24CC801EACC56800F4FE6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC24CC881EACC56800F4FE6C /* MobileCenterDistributeResources.bundle */,
+				DC24CC8A1EACC56800F4FE6C /* libPods-InboundApp.a */,
+				DC24CC8C1EACC56800F4FE6C /* libPods-InboundApp-tvOS.a */,
+				DC24CC8E1EACC56800F4FE6C /* libPods-InboundApp-tvOSTests.a */,
+				DC24CC901EACC56800F4FE6C /* libPods-InboundAppTests.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		DC28BC641EAA27A600AFB6EA /* Products */ = {
@@ -677,6 +726,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = DC24CC801EACC56800F4FE6C /* Products */;
+					ProjectRef = DC24CC7F1EACC56800F4FE6C /* Pods.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -910,6 +963,41 @@
 			fileType = archive.ar;
 			path = libRCTText.a;
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC24CC881EACC56800F4FE6C /* MobileCenterDistributeResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MobileCenterDistributeResources.bundle;
+			remoteRef = DC24CC871EACC56800F4FE6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC24CC8A1EACC56800F4FE6C /* libPods-InboundApp.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-InboundApp.a";
+			remoteRef = DC24CC891EACC56800F4FE6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC24CC8C1EACC56800F4FE6C /* libPods-InboundApp-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-InboundApp-tvOS.a";
+			remoteRef = DC24CC8B1EACC56800F4FE6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC24CC8E1EACC56800F4FE6C /* libPods-InboundApp-tvOSTests.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-InboundApp-tvOSTests.a";
+			remoteRef = DC24CC8D1EACC56800F4FE6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC24CC901EACC56800F4FE6C /* libPods-InboundAppTests.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-InboundAppTests.a";
+			remoteRef = DC24CC8F1EACC56800F4FE6C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		DC28BC811EAA27A600AFB6EA /* libRNAnalytics.a */ = {
