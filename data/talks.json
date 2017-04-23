@@ -12,26 +12,26 @@
   },
   {
     "category": "Breakout",
-    "title": "KEY-W01 - Keynote with Ta-Nehisi Coates",
-    "stage": "Main Stage",
+    "title": "BRK-B01 - Issa Rae",
+    "stage": "Breakout 1",
     "speakerInfo": {
-      "image": "https://static01.nyt.com/images/2016/05/12/us/12xp-coates/12xp-coates-master768.jpg",
-      "summary": "Ta-Nehisi Paul Coates is an American writer, journalist, and educator. Coates is a national correspondent for The Atlantic, where he writes about cultural, social and political issues, particularly as they regard African-Americans."
+      "image": "https://www.inbound.com/hubfs/Issa.png",
+      "summary": "Star &amp; Co-Creator, Insecure"
     },
     "time": "8:30AM - 10:00 AM Wed",
-    "date": "2016-11-08",
+    "date": "2016-11-09",
     "id": 2
   },
   {
     "category": "Breakout",
-    "title": "Blah blah",
-    "stage": "Main Stage",
+    "title": "BRK-B02 - Brit Marling",
+    "stage": "Breakout 1",
     "speakerInfo": {
-      "image": "https://static01.nyt.com/images/2016/05/12/us/12xp-coates/12xp-coates-master768.jpg",
-      "summary": "Ta-Nehisi Paul Coates is an American writer, journalist, and educator. Coates is a national correspondent for The Atlantic, where he writes about cultural, social and political issues, particularly as they regard African-Americans."
+      "image": "https://www.inbound.com/hubfs/Brit%20Marling.png",
+      "summary": "Star / Co-Creator, the OA"
     },
     "time": "8:30AM - 10:00 AM Thu",
-    "date": "2016-11-09",
+    "date": "2016-11-10",
     "id": 3
   }
 ]
