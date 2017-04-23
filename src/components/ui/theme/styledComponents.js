@@ -2,14 +2,14 @@ import styled from 'styled-components/native';
 
 const ScreenContainer = styled.View `
   padding-top: 20;
-  background-color: #A4A4A4;
+  background-color: #949494;
   display: flex;
   flex: 1
 `;
 
 const GridImage = styled.Image `
-  width: 52;
-  height: 52;
+  width: 46;
+  height: 46;
 `;
 
 const GridCell = styled.View `
@@ -18,9 +18,15 @@ const GridCell = styled.View `
   flex: 1;
   justify-content: center;
   align-content: center;
+  align-items: center;
   width: ${props => props.gridWidth};
   margin: ${props => props.gridMargin};
 `;
+
+const GridText = styled.Text`
+  margin-top: 10
+`;
+
 
 // gridItem: {
 //   flex: 1,
@@ -31,5 +37,6 @@ const GridCell = styled.View `
 module.exports = {
   ScreenContainer,
   GridImage,
-  GridCell
+  GridCell,
+  GridText
 };

@@ -11,15 +11,11 @@ import {
 } from 'react-native';
 
 import { NavigationActions } from 'react-navigation';
-import { ScreenContainer, GridImage, GridCell } from 'app/components/ui/theme/styledComponents';
+import { ScreenContainer, GridImage, GridCell, GridText } from 'app/components/ui/theme/styledComponents';
 
 const gridMargin = 15;
 
 const styles = StyleSheet.create({
-  icon: {
-    width: 26,
-    height: 26
-  },
   logoContainer: {
     height: 150,
     width: Dimensions.get('window').width,
@@ -28,7 +24,7 @@ const styles = StyleSheet.create({
   gridContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    margin: gridMargin,
+    // margin: gridMargin,
     height: (Dimensions.get('window').height),
     display: 'flex'
   }
@@ -45,16 +41,15 @@ class GridItem extends Component {
     if (Platform.OS === 'ios') {
       icon = icon.replace(/\.[^/.]+$/, '');
     }
-    console.log(icon);
 
     return (
-      <GridCell gridWidth={(Dimensions.get('window').width / 3) - (gridMargin * 2)} gridMargin={gridMargin}>
+      <GridCell gridWidth={(Dimensions.get('window').width - (gridMargin * 6)) / 3} gridMargin={gridMargin}>
         <GridImage
           source={{
             uri: icon
           }}
         />
-        <Text>{this.props.item.title}</Text>
+        <GridText>{this.props.item.title}</GridText>
       </GridCell>
     );
   }
