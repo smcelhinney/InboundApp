@@ -1,11 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   View,
   Text,
-  StyleSheet,
-  FlatList,
   TouchableOpacity,
-  ScrollView
+  Image
 } from 'react-native';
 
 import styles from './styles';
@@ -27,7 +25,7 @@ export default class AgendaItem extends Component {
   }
 
   render() {
-    const {item} = this.props;
+    const { item } = this.props;
 
     return (
       <View>
@@ -40,13 +38,16 @@ export default class AgendaItem extends Component {
             </View>
           </View>
         </TouchableOpacity>
-        <View style={styles[`agendaDetails${this.state.visible
+        <View
+          style={styles[`agendaDetails${this.state.visible
             ? 'Open'
-            : ''}`]}>
+            : ''}`]}
+        >
+          <Image source={{ uri: item.speakerInfo.image }} style={{ width: 150, height: 150 }} />
           <Text>{item.title}</Text>
           <Text>Category: {item.category}</Text>
         </View>
       </View>
-    )
+    );
   }
 }
