@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 import { NavigationActions } from 'react-navigation';
-import { ScreenContainer, GridImage, GridCell, GridText } from 'app/components/ui/theme/styledComponents';
+import { ScreenContainer, GridImage, GridCell, GridText } from '../../ui/theme/styledComponents';
 
 const gridMargin = 15;
 
@@ -68,7 +68,7 @@ class Home extends Component {
   }
 
   getData() {
-    const data = require('app/config/launchpad.json');
+    const data = require('../../../config/launchpad.json');
     this.setState({ data });
   }
 
@@ -94,7 +94,7 @@ class Home extends Component {
 
     return (
       <ScreenContainer>
-        <Image style={styles.logoContainer} resizeMode="contain" source={require('app/assets/inbound_2017.png')} />
+        <Image style={styles.logoContainer} resizeMode="contain" source={require('../../../assets/inbound_2017.png')} />
         <View style={styles.gridContainer}>{this.renderGrid(gridData)}</View>
       </ScreenContainer>
     );

@@ -25,6 +25,8 @@ flow/
 emoji=true
 
 module.system=haste
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=src
 
 experimental.strict_type_args=true
 

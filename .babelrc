@@ -1,9 +1,8 @@
 {
   "presets": ["react-native"],
   "plugins": [
-    ["module-alias", [{
-      "src": "./src",
-      "expose": "app"
-    }]]
+    ["module-resolver", {
+      "root": ["./src"],
+    }]
   ]
 }
