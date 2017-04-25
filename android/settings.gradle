@@ -1,4 +1,6 @@
 rootProject.name = 'InboundApp'
+include ':react-native-permissions'
+project(':react-native-permissions').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-permissions/android')
 include ':mobile-center-crashes'
 project(':mobile-center-crashes').projectDir = new File(rootProject.projectDir, '../node_modules/mobile-center-crashes/android')
 include ':mobile-center-analytics'
