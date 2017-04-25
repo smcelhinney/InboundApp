@@ -27,6 +27,7 @@
       },
       {
          "title": "Maps",
+         "routeName": "Maps",
          "icon": "paper_plane"
       },
       {

@@ -27,13 +27,6 @@ const GridText = styled.Text`
   margin-top: 10
 `;
 
-
-// gridItem: {
-//   flex: 1,
-//   width: (Dimensions.get('window').width / 3) - (gridMargin * 2),
-//   margin: gridMargin
-// }
-
 module.exports = {
   ScreenContainer,
   GridImage,

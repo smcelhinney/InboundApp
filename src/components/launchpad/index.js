@@ -4,6 +4,7 @@ import {
 } from 'react-navigation';
 
 import Home from './screens/home';
+import Maps from '../maps';
 import AgendaNavigation from '../agenda/navigation';
 
 const InboundApp = StackNavigator({
@@ -13,6 +14,9 @@ const InboundApp = StackNavigator({
       title: 'Home',
       headerVisible: false
     }
+  },
+  Maps: {
+    screen: Maps,
   },
   Agenda: {
     screen: AgendaNavigation
